@@ -1,5 +1,5 @@
 ---
-title: "[포스팅 예시] 이곳에 제목을 입력하세요"
+title: "[UE5] Billboard를 활용한 Fluffy Material 표현"
 excerpt: "본문의 주요 내용을 여기에 입력하세요"
 
 categories:
@@ -16,6 +16,33 @@ date: 2022-07-24
 last_modified_at: 2022-07-24
 ---
 
-## 🦥 본문
 
-본문은 여기에 ...
+{% include video id="zohCJ-XxcrA" provider="youtube" %}
+
+
+### Billboard Component
+항상 카메라를 향해 렌더링 되는 2D 텍스처 [공식 문서](https://docs.unrealengine.com/4.27/ko/Basics/Components/Rendering/)
+
+- 모델링 폴리곤은 quad로 제작하기
+- 한 개의 폴리곤이 UV 전체를 다 차지하게 만들기
+
+### Blender에서 Mesh 생성
+<iframe width="2227" height="1135" src="https://www.youtube.com/embed/wPBX9kqcHzE" title="How to Make a Stylized Tree by using Blender and Unity" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- 3:20 기초적인 블렌더 메쉬 생성과 조작을 알려준다.
+- 텍스처 2장을 교차시켜 파티클 속성*Particle Properties*의 Hair 기능으로 메쉬 표면에 얹어주는 방법으로 구현. 
+
+
+{% include video id="9MsCntRiOWU" provider="youtube" %}
+
+- 4:40 quad 폴리곤 형태로 면 갯수 쉽게 조절하는 법 *Remesh*
+- 6:00 **UV 펼 때 폴리곤을 가득 채우는 방법**
+> Edit Mode에서 UV > Reset
+> 상단 UV Editing 레이아웃으로 UV 확인 가능
+
+### Blender 원숭이 (like 3ds max 주전자)
+- 스무딩을 안 준 채로 엔진에 넣었더니 스무딩이 없다고 경고창 떴다.   
+  No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+{% include video id="itPxJ-GUNKQ" provider="youtube" %}
+1. 오브젝트 우클릭 > Shade Smooth
+2. Modifier 추가 > Subdivision Surface   
+*(질문)* 엔진으로 Subdivision FBX Export할 때 세팅 규칙이 있나?
