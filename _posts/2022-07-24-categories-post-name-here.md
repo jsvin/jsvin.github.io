@@ -62,5 +62,6 @@ last_modified_at: 2021-10-09
   
 #### 디퓨즈 Diffuse & 스펙큘러 Specular
 - 현실에서 빛이 서피스에서 반사되어 나올 때, 디퓨즈와 스펙큘러 반사 두 가지로 구분할 수 있다.
+![image](https://github.com/choiiis/minimal-mistakes-choiiis-customized/assets/37493453/d8d53b52-123e-401e-8818-2ba1a993cd91)
 - 바닥에서 바운스되는 미묘한 조명을 표현하려면 디퓨즈만 방출하는 라이트를 추가한다.
 - 캐릭터 눈에 하이라이트를 추가하되 전체 안구의 노출에 영향이 없으려면 스펙큘러만 방출하는 라이트를 추가한다.
