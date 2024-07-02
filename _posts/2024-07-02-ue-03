@@ -1,0 +1,53 @@
+---
+title: "[UE5] 엔진 Basic Lighting"
+excerpt: "책에서 본 기초 개념을 엔진에서 공부해보자"
+
+categories:
+  - unreal engine
+tags:
+  - [unreal engine, lighting]
+
+permalink: /ue/01/
+
+toc: true
+toc_sticky: true
+
+date: 2024-06-24
+last_modified_at: 2024-06-24
+---
+
+{% include video id="eiilcq-YjMc" provider="youtube" %}   
+
+
+`23:16`  
+
+##### Directional Light
+태양, 창문이 많은 실내 공간에서 사용.
+Static 게임에서 흔히 사용. Bake 가능.
+Movable 리얼타임, 해 뜨고 지기 반영
+58:12 Light Shafts Occlusion, Bloom
+
+
+##### Point Light
+가로등, 횃불
+
+
+##### Spot Light
+원뿔 빛, 자동차 헤드라이트, 하드 섀도우
+28:50 Inner Cone Angle, Outer Cone Angle 두 비율로 Attenuation 조절 효과 가능. (단, 그림자 부드러움에는 영향 없음.)
+
+
+#### Rect Light
+에어리어 라이트, 사진관 조명. 소프트 섀도우 만들어냄.
+
+
+#### HDRIBackdrop 플러그인
+
+
+#### Emissive Light
+머티리얼의 Emissive Color에 Multiply로 수치 1 줘서 빛나게 만든다. 
+[머티리얼 인스턴스*Material Instance*](https://jsvin.github.io/ue/04)로 색상, 수치 다양하게 변경하면 된다. 
+
+Source radius가 작아지면(=광원이 작아지면) 하드 섀도우, 커지면 소프트 섀도우에 가까워진다.
+
+37:38 Advanced > Cast Ray Traced Shadows > Enabled
