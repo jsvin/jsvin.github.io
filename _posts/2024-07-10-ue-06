@@ -1,0 +1,22 @@
+---
+title: "[UE5] 모션매칭 시스템에 새 캐릭터 리타겟팅하기"
+excerpt: "IK Rig와 IK Retargeter"
+
+categories:
+  - unreal engine
+tags:
+  - [unreal engine, animation]
+
+permalink: /ue/06/
+
+toc: true
+toc_sticky: true
+
+date: 2024-07-09
+last_modified_at: 2024-07-09
+---
+
+{% include video id="Yyg7HK3-YaQ" provider="youtube" %}   
+
+
+리타겟 시 A포즈, T포즈로 서로 다를 경우 이슈가 생길 수 있다.
